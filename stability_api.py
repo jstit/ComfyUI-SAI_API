@@ -7,8 +7,11 @@ from torchvision.transforms import ToPILImage
 from io import BytesIO
 import os
 import time
+from dotenv import load_dotenv
 
-API_KEY = os.environ.get("SAI_API_KEY")
+load_dotenv()
+
+API_KEY = os.getenv("SAI_API_KEY")
 
 # Check for API key in file as a backup, not recommended
 try:
